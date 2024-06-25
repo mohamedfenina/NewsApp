@@ -22,7 +22,7 @@ class PostProvider with ChangeNotifier {
   void setSearchQuery(String query) {
     if (_debounce?.isActive ?? false) _debounce?.cancel();
 
-    _debounce = Timer(Duration(milliseconds: 500), () {
+    _debounce = Timer(const Duration(milliseconds: 500), () {
       _searchQuery = query;
       _posts.clear();
       fetchPosts(searchQuery: query);
@@ -62,11 +62,10 @@ class PostProvider with ChangeNotifier {
         _nextUrl = response.data['next'];
         _posts.addAll(newPosts);
       } else {
-        print('this');
+
         return Future.error('Failed to load data');
       }
     } catch (error) {
-      print('this is the $error');
       if (error is DioException &&
           (error.type == DioExceptionType.connectionTimeout ||
               error.type == DioExceptionType.connectionError)) {

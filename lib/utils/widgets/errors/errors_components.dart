@@ -34,7 +34,7 @@ Widget ConnectionProbleme({
           width: 200,
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
       HeaderText(text: 'Poor connection!',
@@ -96,7 +96,7 @@ Widget NodataFound({
 
 Widget UndifinedProbleme({
   required Function pressed,
-})=>Container(
+})=>SizedBox(
   width: 320,
   child: Column(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -120,7 +120,7 @@ Widget UndifinedProbleme({
           width: 200,
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
       HeaderText(text: 'Something is wrong!',

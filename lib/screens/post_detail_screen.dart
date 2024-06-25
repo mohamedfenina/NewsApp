@@ -1,14 +1,9 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 
+import 'package:flutter/material.dart';
 import 'package:news_app/screens/web_view_screen.dart';
 import 'package:news_app/utils/widgets/buttons/default_button.dart';
 import 'package:news_app/utils/widgets/buttons/default_outlined_button.dart';
 import 'package:share_plus/share_plus.dart';
-
 import '../models/post_model.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_text_styles.dart';
@@ -62,14 +57,14 @@ class PostDetailScreen extends StatelessWidget {
                       onPressed: (){
                         Navigator.pop(context);
                       },
-                      padding: EdgeInsets.all(0),
+                      padding: const EdgeInsets.all(0),
                       icon: Container(
-                        padding: EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
                             color: AppColors.grey.withOpacity(0.4),
                             shape: BoxShape.circle
                           ),
-                          child: Center(
+                          child: const Center(
                             child: Icon(
                               Icons.arrow_back,color: AppColors.white,size: 30,),
                           )),
@@ -80,7 +75,7 @@ class PostDetailScreen extends StatelessWidget {
               alignment: Alignment.bottomCenter,
               child: Container(
                 height: MediaQuery.sizeOf(context).height * 0.45,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: AppColors.white,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(20),
@@ -96,10 +91,10 @@ class PostDetailScreen extends StatelessWidget {
                         color: AppColors.grey.withOpacity(0.6),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      margin: EdgeInsets.only(top: 10),
+                      margin: const EdgeInsets.only(top: 10),
                     ),
                     SingleChildScrollView(
-                      padding: EdgeInsets.all(20),
+                      padding: const EdgeInsets.all(20),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -119,10 +114,10 @@ class PostDetailScreen extends StatelessWidget {
                                   ),
       
                                 ),
-                                SizedBox(width: 20,),
+                                const SizedBox(width: 20,),
                                 Text(data.newsSite,
                                   style: AppTextStyle.boldBlack22,),
-                                Spacer(),
+                                const Spacer(),
                                 Text(data.publishedAt,
                                   style: AppTextStyle.regularGrey14,),
       
@@ -157,7 +152,7 @@ class PostDetailScreen extends StatelessWidget {
         bottomNavigationBar: BottomAppBar(
           color: AppColors.white,
           height: 80,
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
       
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -169,7 +164,7 @@ class PostDetailScreen extends StatelessWidget {
       
                 }),
               ),
-              SizedBox(width: 20,),
+              const SizedBox(width: 20,),
       
               Expanded(
                 child: DefaultButton(

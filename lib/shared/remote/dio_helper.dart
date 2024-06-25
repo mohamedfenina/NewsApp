@@ -2,7 +2,7 @@
 
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
+
 
 class DioHelper {
   static late  Dio dio;
@@ -15,8 +15,8 @@ class DioHelper {
       BaseOptions(
         baseUrl: baseUrl,
         receiveDataWhenStatusError: true,
-        connectTimeout: Duration(seconds: 30),
-        receiveTimeout: Duration(seconds: 30),
+        connectTimeout: const Duration(seconds: 30),
+        receiveTimeout: const Duration(seconds: 30),
 
 
 

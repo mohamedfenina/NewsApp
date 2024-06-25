@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/providers/post_provider.dart';
-import 'package:news_app/providers/post_provider.dart';
-import 'package:news_app/screens/post_screen.dart';
-import 'package:news_app/screens/post_screen.dart';
+
 import 'package:news_app/screens/splash_screen.dart';
 import 'package:news_app/shared/remote/dio_helper.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +28,7 @@ class MyApp extends StatelessWidget {
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurpleAccent),
     useMaterial3: false,
     ),
-    home: SplashScreen(),
+    home: const SplashScreen(),
     ),
     );
   }

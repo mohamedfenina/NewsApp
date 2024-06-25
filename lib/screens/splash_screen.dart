@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:news_app/screens/post_screen.dart';
 import 'package:news_app/utils/app_images.dart';
 import 'package:news_app/utils/app_text_styles.dart';
-
 import 'package:page_transition/page_transition.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -23,7 +22,7 @@ class SplashScreen extends StatelessWidget {
               height: MediaQuery.sizeOf(context).width/2,
               width: MediaQuery.sizeOf(context).width/2,
             fit: BoxFit.cover,),
-            SizedBox(
+            const SizedBox(
               height: 30,
             ),
             Text('News App',
@@ -36,7 +35,7 @@ class SplashScreen extends StatelessWidget {
         duration: 2500,
         splashTransition: SplashTransition.fadeTransition,
         pageTransitionType: PageTransitionType.topToBottom,
-        animationDuration: Duration(seconds: 2),
+        animationDuration: const Duration(seconds: 2),
       ),
 
     );

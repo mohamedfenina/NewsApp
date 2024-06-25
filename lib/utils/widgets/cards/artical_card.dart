@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:news_app/models/post_model.dart';
 import 'package:news_app/utils/app_colors.dart';
 import 'package:news_app/utils/app_text_styles.dart';
@@ -75,17 +74,17 @@ class _ArticalCardState extends State<ArticalCard> with SingleTickerProviderStat
                         ),
           
                       ),
-                      SizedBox(width: 5,),
+                      const SizedBox(width: 5,),
                       Text(widget.data.newsSite,
                       style: AppTextStyle.boldBlack18,),
-                        SizedBox(width: 5,),
+                        const SizedBox(width: 5,),
                           Expanded(
                             child: Text(widget.data.publishedAt,
                             style: AppTextStyle.regularGrey14,),
                           ),
           
                     ],),
-                    SizedBox(height: 5,),
+                    const SizedBox(height: 5,),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 10,right: 10,left:10),
                       child: Column(
@@ -148,7 +147,7 @@ class _ArticalCardState extends State<ArticalCard> with SingleTickerProviderStat
           ),
           Container(
             height: 1,
-            margin: EdgeInsets.only(top: 20),
+            margin: const EdgeInsets.only(top: 20),
             color: Colors.grey.withOpacity(0.5),
           ),
         ],

@@ -12,11 +12,7 @@ class SearchField extends StatefulWidget {
   IconData? prefix;
   final String label;
   final Function clear;
-
-
    final Function change;
-
-
 
 
   SearchField({super.key, required this.contoller, required this.type,
@@ -35,7 +31,7 @@ class _SearchFieldState extends State<SearchField> {
   Widget build(BuildContext context) {
     return Container(
         height: 65,
-        padding: EdgeInsets.symmetric(vertical: 5),
+        padding: const EdgeInsets.symmetric(vertical: 5),
       child: TextFormField(
         onTapOutside: (event){
           FocusManager.instance.primaryFocus!.unfocus();
@@ -71,12 +67,12 @@ class _SearchFieldState extends State<SearchField> {
           ),
           hintText: widget.label,
           isDense: true,
-          contentPadding: EdgeInsets.fromLTRB(10, 18, 10, 18),
+          contentPadding: const EdgeInsets.fromLTRB(10, 18, 10, 18),
           fillColor: Colors.white,
           filled: true,
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10.0),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: AppColors.grey,
               width: 1.0,
             ),
@@ -84,7 +80,7 @@ class _SearchFieldState extends State<SearchField> {
           enabledBorder: OutlineInputBorder(
 
             borderRadius: BorderRadius.circular(10.0),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
               color: AppColors.grey,
               width: 1.0,
             ),
@@ -92,7 +88,7 @@ class _SearchFieldState extends State<SearchField> {
 
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(6),
-            borderSide: BorderSide(
+            borderSide: const BorderSide(
                 color: AppColors.grey,
                 width: 1
             ),
@@ -112,7 +108,7 @@ class _SearchFieldState extends State<SearchField> {
 
 
 
-          prefixIcon:Icon(Icons.search,
+          prefixIcon:const Icon(Icons.search,
           size: 25,),
 
           suffixIcon: TextButton(

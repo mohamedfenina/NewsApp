@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:news_app/utils/app_text_styles.dart';
 
 import '../../app_colors.dart';
@@ -36,7 +36,7 @@ class _DefaultButtonState extends State<DefaultButton> {
             color: widget.containerColor.withOpacity(0.1),
             spreadRadius: -10,
             blurRadius: 40,
-            offset: Offset(0, 25), // changes position of shadow
+            offset: const Offset(0, 25), // changes position of shadow
           ),
         ],
       ),

@@ -9,13 +9,15 @@ class PostScreen extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
   final TextEditingController searchController = TextEditingController();
 
+  PostScreen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
-        title: Text('News App'),
+        leading: const Icon(Icons.menu),
+        title: const Text('News App'),
       ),
       body: Consumer<PostProvider>(
         builder: (context, postProvider, child) {
@@ -58,7 +60,7 @@ class PostScreen extends StatelessWidget {
                   future: postProvider.posts.isEmpty && !postProvider.isError ? postProvider.fetchPosts() : null,
                   builder: (context, snapshot) {
                       if ((postProvider.posts.isEmpty && !postProvider.isError) || snapshot.connectionState == ConnectionState.waiting) {
-                        return SliverFillRemaining(
+                        return const SliverFillRemaining(
                           child: Center(child: CircularProgressIndicator()),
                         );
                       }
@@ -102,8 +104,8 @@ class PostScreen extends StatelessWidget {
                                 (context, index) {
                               if (index == posts.length) {
                                 return postProvider.isFetching
-                                    ? Center(child: CircularProgressIndicator())
-                                    : SizedBox.shrink();
+                                    ? const Center(child: CircularProgressIndicator())
+                                    : const SizedBox.shrink();
                               }
                               final post = posts[index];
                               return ArticalCard(
